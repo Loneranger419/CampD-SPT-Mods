@@ -1,0 +1,85 @@
+.indicator {
+    flex: 0 0 10px; /* fixed width for circle */
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+.version {
+    width: 40px; /* adjust based on longest version */
+    text-align: right;
+    color: #aaa;
+    font-family: monospace; /* keeps digits aligned */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#mainWindow {
+    min-width: 650px;
+    width: fit-content;
+    margin: auto;
+    padding: 15px 20px 5px 20px;
+    background-color: #222;
+    border-color: #111;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+div#head{
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    padding: 0px 50px 5px 50px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #111;
+}
+
+div#head a{
+    text-decoration: underline;
+    color: #e67e22;
+}
+
+#myList li,
+#currentList li,
+#potentialList li {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between version and link */
+  padding: 8px 12px;
+  border-bottom: 1px solid #444;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #ccc;
+  border-bottom: 1px solid #555;
+  padding-bottom: 4px;
+}
+
+#currentList li {
+  border-left: 3px solid #2ecc71; /* green stripe for current mods */
+  padding-left: 5px;
+}
+
+#potentialList li {
+  border-left: 3px solid #e67e22; /* orange stripe for outdated mods */
+  padding-left: 5px;
+}

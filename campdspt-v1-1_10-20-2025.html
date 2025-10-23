@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Camp-D SPT Mods</title>
+    <meta name="description" content="A list of SPT mods used by Camp-D. Both current and potential mods are listed with compatibility indicators.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<style>
+.indicator {
+    flex: 0 0 10px; /* fixed width for circle */
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 0px;
+    vertical-align: middle;
+}
+
+.version {
+    width: 40px; /* adjust based on longest version */
+    text-align: right;
+    color: #aaa;
+    font-family: monospace; /* keeps digits aligned */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #f4f4f4;
+}
+
+a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#mainWindow {
+    min-width: 650px;
+    width: fit-content;
+    margin: auto;
+    padding: 15px 20px 5px 20px;
+    background-color: #222;
+    border-color: #111;
+    border-style: solid;
+    border-radius: 8px;
+}
+
+div#head{
+    margin: auto;
+    width: fit-content;
+    text-align: center;
+    padding: 0px 50px 5px 50px;
+    border: 2px solid #444;
+    border-radius: 8px;
+    background-color: #111;
+}
+
+div#head a{
+    text-decoration: underline;
+    color: #e67e22;
+}
+
+#myList li,
+#currentList li,
+#potentialList li {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* space between version and link */
+  padding: 8px 12px;
+  border-bottom: 1px solid #444;
+}
+
+h2 {
+  margin-top: 20px;
+  color: #ccc;
+  border-bottom: 1px solid #555;
+  padding-bottom: 4px;
+}
+
+#currentList li {
+  border-left: 3px solid #2ecc71; /* green stripe for current mods */
+  padding-left: 5px;
+}
+
+#potentialList li {
+  border-left: 3px solid #e67e22; /* orange stripe for outdated mods */
+  padding-left: 5px;
+}
+</style>
+</head>
+
+<body>
+    <ul id="myList">
+        <li data-current="false" data-mod-version="1.6.5" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/592/amandss-graphics">Amands's Graphics</a></li>
+        <li data-current="false" data-mod-version="5.0.2" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/1155/lootvalue">LootValue</a></li>
+        <li data-current="false" data-mod-version="1.7.0" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/697/fontaines-always-level-endurance-ale">Fontaine's Always Level Endurance (ALE)</a></li>
+        <li data-current="false" data-mod-version="1.2.3" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/1311/ram-cleaner-fix">Ram Cleaner Fix</a></li>
+        <li data-current="false" data-mod-version="3.1.6" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/789/moar-bagels-ultra-lite-spawn-mod">MOAR + Bagels - Ultra lite spawn mod</a></li>
+        <li data-current="true" data-mod-version="5.0.3" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/1342/ui-fixes">UI Fixes</a></li>
+        <li data-current="true" data-mod-version="1.0.2" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/1431/dynamic-maps">Dynamic Maps</a></li>
+        <li data-current="false" data-mod-version="1.4.0" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/1533/more-tag-colours">More Tag Colours</a></li>
+        <li data-current="true" data-mod-version="4.2.0" data-game-version="4.0.0"><a href="https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement">SAIN - Solarint's AI Modifications - Full AI Combat System Replacement</a></li>
+        <li data-current="false" data-mod-version="1.6.0" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/812/looting-bots">Looting Bots</a></li>
+        <li data-current="false" data-mod-version="1.7.1" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh">Waypoints - Expanded Navmesh</a></li>
+        <li data-current="false" data-mod-version="1.5.17" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/861/morecheckmarks">MoreCheckmarks</a></li>
+        <li data-current="false" data-mod-version="2.0.3" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/865/gilded-key-storage">Gilded Key Storage</a></li>
+        <li data-current="true" data-mod-version="1.4.0" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/902/bigbrain">BigBrain</a></li>
+        <li data-current="false" data-mod-version="1.5.0" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/933/use-loose-loot">Use Loose Loot</a></li>
+        <li data-current="false" data-mod-version="1.3100.3" data-game-version="3.10.5"><a href="https://forge.sp-tarkov.com/mod/1055/thats-lit-logical-ai-vision">That's Lit - Logical AI Vision</a></li>
+        <li data-current="false" data-mod-version="0.10.3" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/1109/questing-bots">Questing Bots</a></li>
+        <li data-current="false" data-mod-version="2.0.1" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/1131/live-flea-prices">Live Flea Prices</a></li>
+        <li data-current="false" data-mod-version="2.0.1" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/2389/expanded-task-text">Expanded Task Text</a></li>
+        <li data-current="true" data-mod-version="2.0.2" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/2326/project-fika">Project Fika</a></li>
+        <li data-current="false" data-mod-version="1.0.4" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/2100/make-marked-room-loot-great-again">Make Marked Room Loot Great Again</a></li>
+        <li data-current="false" data-mod-version="1.2.0" data-game-version="4.0.0"><a href="https://forge.sp-tarkov.com/mod/1925/nerfbotgrenades">NerfBotGrenades</a></li>
+        <li data-current="false" data-mod-version="0.43.5" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/1896/tarkov-hd-item-rework-project">Tarkov HD Item Rework Project</a></li>
+        <li data-current="false" data-mod-version="1.3.1" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/1657/mergeconsumables">MergeConsumables</a></li>
+        <li data-current="false" data-mod-version="1.2.2" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/1582/headshot-darkness">Headshot Darkness</a></li>
+        <li data-current="false" data-mod-version="1.4.0" data-game-version="3.11.4"><a href="https://forge.sp-tarkov.com/mod/1575/increase-climb-height">Increase Climb Height</a></li>
+        <li data-current="false" data-mod-version="2.0.0" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/1539/bosses-have-lega-medals">Bosses Have Lega Medals</a></li>
+        <li data-current="true" data-mod-version="2.0.1" data-game-version="4.0.1"><a href="https://forge.sp-tarkov.com/mod/1538/ref-spt-friendly-quests">Ref - SPT Friendly Quests</a></li>
+    </ul>
+    <div id="mainWindow">
+        <div id="head">
+            <h1>Camp-D SPT Modlist</h1>
+            <p>Download the <a href="https://forge.sp-tarkov.com/installer">installer</a> for SPT</p>
+        </div>
+        <h2>Current Mods</h2>
+        <ul id="currentList"></ul>
+
+        <h2>Potential Mods</h2>
+        <ul id="potentialList"></ul>
+    </div>
+    
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const currentVersion = "4.0.1";
+    const [curMajor, curMinor, curPatch] = currentVersion.split(".").map(Number);
+
+    // Create lists
+    const allItems = Array.from(document.querySelectorAll("li"));
+    const currentList = document.querySelector("#currentList");
+    const potentialList = document.querySelector("#potentialList");
+
+    // Sort alphabetically by link text
+    allItems.sort((a, b) =>
+        a.querySelector("a").textContent.toLowerCase()
+        .localeCompare(b.querySelector("a").textContent.toLowerCase())
+    );
+
+    // Process each item
+    allItems.forEach((item) => {
+        const modVersion  = item.dataset.modVersion || "0.0.0";
+        const modGameVersion = item.dataset.gameVersion || "0.0.0";
+        const [modMajor = 0, modMinor = 0, modPatch = 0] = modGameVersion.split(".").map(Number);
+        const link = item.querySelector("a");
+    
+        // Determine color
+        let color = "red";
+        if (modMajor === curMajor) {
+            if (modMinor < curMinor) color = "yellow";
+            else if (modMinor === curMinor && modPatch < curPatch) color = "yellow";
+            else color = "green";
+        }
+    
+        // Build indicator
+        const indicator = document.createElement("span");
+        indicator.className = "indicator";
+        indicator.style.backgroundColor = color;
+    
+        // Rebuild list item
+        item.innerHTML = "";
+        item.appendChild(indicator);
+                
+        const versionSpan = document.createElement("span");
+        versionSpan.className = "version";
+        versionSpan.textContent = modVersion;
+        item.appendChild(versionSpan);
+                    
+        item.appendChild(link);
+        
+        // Append to correct list
+        if (item.dataset.current === "true") {
+            currentList.appendChild(item);
+        } else {
+            potentialList.appendChild(item);
+        }
+    });
+});
+</script>
+</body>
+</html>
