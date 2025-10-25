@@ -51,6 +51,10 @@ div#head{
     border: 2px solid #444;
     border-radius: 8px;
     background-color: #111;
+    background-image: url("header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%;
 }
 
 div#head a{
