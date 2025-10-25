@@ -37,7 +37,7 @@ ul {
 
 #mainWindow {
     min-width: 400px;
-    max-width: 1000px;
+    max-width: 900px;
     width: fit-content;
     margin: auto;
     padding: 15px 20px 5px 20px;

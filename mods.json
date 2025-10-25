@@ -222,5 +222,13 @@
         "current": false,
         "mod_version": "1.7.1",
         "game_version": "3.11.4"
+    },
+    {
+        "name": "Janky's Visual Assist",
+        "url": "https://forge.sp-tarkov.com/mod/2213/jankys-visual-assist",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2916.jpg",
+        "current": true,
+        "mod_version": "1.1.0",
+        "game_version": "4.0.1"
     }
 ]
