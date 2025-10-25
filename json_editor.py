@@ -1,22 +1,22 @@
-import csv
+import json
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 
-CSV_FILE = "mods.csv"
+JSON_FILE = "mods.json"
 FIELDS = ["name", "url", "icon", "current", "mod_version", "game_version"]
 
-class CSVEditor(tk.Tk):
+class JSONEditor(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.title("CSV Mod Editor")
+        self.title("JSON Mod Editor")
         self.geometry("1200x600")
 
         # Toolbar
         toolbar = tk.Frame(self)
         toolbar.pack(fill=tk.X, padx=5, pady=5)
 
-        tk.Button(toolbar, text="Open CSV", command=self.load_csv).pack(side=tk.LEFT, padx=2)
-        tk.Button(toolbar, text="Save CSV", command=self.save_csv).pack(side=tk.LEFT, padx=2)
+        tk.Button(toolbar, text="Open JSON", command=self.load_json).pack(side=tk.LEFT, padx=2)
+        tk.Button(toolbar, text="Save JSON", command=self.save_json).pack(side=tk.LEFT, padx=2)
         tk.Button(toolbar, text="Add Row", command=self.add_row).pack(side=tk.LEFT, padx=2)
         tk.Button(toolbar, text="Delete Selected", command=self.delete_row).pack(side=tk.LEFT, padx=2)
 
@@ -34,44 +34,51 @@ class CSVEditor(tk.Tk):
         vsb.pack(side=tk.RIGHT, fill=tk.Y)
         hsb.pack(side=tk.BOTTOM, fill=tk.X)
 
-        self.load_csv()
+        self.load_json()
         self.tree.bind("<Double-1>", self.edit_cell)
 
-    def load_csv(self):
-        path = CSV_FILE
+    def load_json(self):
+        path = filedialog.askopenfilename(initialfile=JSON_FILE, filetypes=[("JSON files", "*.json")])
+        if not path:
+            return
 
-
-        # Clear existing rows
         for row in self.tree.get_children():
             self.tree.delete(row)
 
-        # Load CSV safely
-        with open(path, newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            # Normalize headers: remove BOM, lowercase, trim
-            field_map = {h.strip().replace('\ufeff', '').lower(): h for h in reader.fieldnames}
-            for row in reader:
-                clean = {}
-                for field in FIELDS:
-                    source = field_map.get(field)
-                    clean[field] = row.get(source, "") if source else ""
-                self.tree.insert("", "end", values=[clean[f] for f in FIELDS])
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to read JSON: {e}")
+            return
 
-        self.csv_path = path
+        for mod in data:
+            row = [mod.get(f, "") for f in FIELDS]
+            # Normalize boolean to text
+            row[FIELDS.index("current")] = str(mod.get("current", False)).lower()
+            self.tree.insert("", "end", values=row)
 
-    def save_csv(self):
-        if not hasattr(self, "csv_path"):
+        self.json_path = path
+
+    def save_json(self):
+        if not hasattr(self, "json_path"):
             messagebox.showerror("Error", "No file loaded.")
             return
 
         rows = [self.tree.item(item)["values"] for item in self.tree.get_children()]
+        mods = []
+        for r in rows:
+            mod = {f: r[i] for i, f in enumerate(FIELDS)}
+            # Convert 'current' field to boolean
+            mod["current"] = str(mod["current"]).strip().lower() == "true"
+            mods.append(mod)
 
-        with open(self.csv_path, "w", newline='', encoding="utf-8") as f:
-            writer = csv.writer(f)
-            writer.writerow(FIELDS)
-            writer.writerows(rows)
-
-        messagebox.showinfo("Saved", f"Saved {len(rows)} rows to {self.csv_path}")
+        try:
+            with open(self.json_path, "w", encoding="utf-8") as f:
+                json.dump(mods, f, indent=4, ensure_ascii=False)
+            messagebox.showinfo("Saved", f"Saved {len(mods)} entries to {self.json_path}")
+        except Exception as e:
+            messagebox.showerror("Error", f"Failed to write JSON: {e}")
 
     def add_row(self):
         self.tree.insert("", "end", values=[""] * len(FIELDS))
@@ -103,5 +110,5 @@ class CSVEditor(tk.Tk):
         entry.bind("<FocusOut>", lambda e: entry.destroy())
 
 if __name__ == "__main__":
-    app = CSVEditor()
+    app = JSONEditor()
     app.mainloop()
