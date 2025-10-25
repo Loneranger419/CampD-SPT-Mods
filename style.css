@@ -30,6 +30,11 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: #63b3ed;
+    text-decoration: underline;
+}
+
 ul {
     list-style-type: none;
     padding-left: 0px;
@@ -48,6 +53,7 @@ ul {
 }
 
 div#head{
+    color: #fff;
     margin: auto;
     width: fit-content;
     text-align: center;
@@ -61,9 +67,16 @@ div#head{
     background-position: center 30%;
 }
 
+div#head a:hover{
+    color: #e49c5d;
+}
+
 div#head a{
     text-decoration: underline;
     color: #e67e22;
+    background-color: #000;
+    padding: 4px 8px 6px 8px;
+    border-radius: 4px;
 }
 
 #myList li,
