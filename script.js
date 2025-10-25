@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
         link.target = "_blank";
 
         // --- Assemble ---
-        li.append(indicator, icon, link, version);
+        li.append(indicator, icon, version, link);
 
         // --- Append to correct section ---
         (mod.current ? currentList : potentialList).appendChild(li);
