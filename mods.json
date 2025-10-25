@@ -1,0 +1,226 @@
+[
+    {
+        "name": "Amands's Graphics",
+        "url": "https://forge.sp-tarkov.com/mod/592/amandss-graphics",
+        "icon": "https://forge-static.sp-tarkov.com/mods/813.png",
+        "current": false,
+        "mod_version": "1.6.5",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "BigBrain",
+        "url": "https://forge.sp-tarkov.com/mod/902/bigbrain",
+        "icon": "https://placehold.co/144x144/31343C/EEE?font=source-sans-pro&text=BigBrain",
+        "current": true,
+        "mod_version": "1.4.0",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Bosses Have Lega Medals",
+        "url": "https://forge.sp-tarkov.com/mod/1539/bosses-have-lega-medals",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2109.png",
+        "current": false,
+        "mod_version": "2.0.0",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Dynamic Maps",
+        "url": "https://forge.sp-tarkov.com/mod/1431/dynamic-maps",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1981.png",
+        "current": true,
+        "mod_version": "1.0.2",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Expanded Task Text",
+        "url": "https://forge.sp-tarkov.com/mod/2389/expanded-task-text",
+        "icon": "https://forge-static.sp-tarkov.com/mods/AP38WtYr3Z9Fu40V12EMppHNcMgIDhbirY0i1Lpr.jpg",
+        "current": false,
+        "mod_version": "2.0.1",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Fontaine's Always Level Endurance (ALE)",
+        "url": "https://forge.sp-tarkov.com/mod/697/fontaines-always-level-endurance-ale",
+        "icon": "https://forge-static.sp-tarkov.com/mods/937.jpg",
+        "current": false,
+        "mod_version": "1.7.0",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "Gilded Key Storage",
+        "url": "https://forge.sp-tarkov.com/mod/865/gilded-key-storage",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1166.png",
+        "current": false,
+        "mod_version": "2.0.3",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Headshot Darkness",
+        "url": "https://forge.sp-tarkov.com/mod/1582/headshot-darkness",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2164.png",
+        "current": false,
+        "mod_version": "1.2.2",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "Increase Climb Height",
+        "url": "https://forge.sp-tarkov.com/mod/1575/increase-climb-height",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2154.png",
+        "current": false,
+        "mod_version": "1.4.0",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "Live Flea Prices",
+        "url": "https://forge.sp-tarkov.com/mod/1131/live-flea-prices",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1561.png",
+        "current": false,
+        "mod_version": "2.0.1",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Looting Bots",
+        "url": "https://forge.sp-tarkov.com/mod/812/looting-bots",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1096.png",
+        "current": false,
+        "mod_version": "1.6.0",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "LootValue",
+        "url": "https://forge.sp-tarkov.com/mod/1155/lootvalue",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1606.png",
+        "current": false,
+        "mod_version": "5.0.2",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "Make Marked Room Loot Great Again",
+        "url": "https://forge.sp-tarkov.com/mod/2100/make-marked-room-loot-great-again",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2785.png",
+        "current": false,
+        "mod_version": "1.0.4",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "MergeConsumables",
+        "url": "https://forge.sp-tarkov.com/mod/1657/mergeconsumables",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2262.png",
+        "current": false,
+        "mod_version": "1.3.1",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "MOAR + Bagels - Ultra lite spawn mod",
+        "url": "https://forge.sp-tarkov.com/mod/789/moar-bagels-ultra-lite-spawn-mod",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1059.webp",
+        "current": false,
+        "mod_version": "3.1.6",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "More Tag Colours",
+        "url": "https://forge.sp-tarkov.com/mod/1533/more-tag-colours",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2100.png",
+        "current": false,
+        "mod_version": "1.4.0",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "MoreCheckmarks",
+        "url": "https://forge.sp-tarkov.com/mod/861/morecheckmarks",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1159.png",
+        "current": false,
+        "mod_version": "1.5.17",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "NerfBotGrenades",
+        "url": "https://forge.sp-tarkov.com/mod/1925/nerfbotgrenades",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2596.png",
+        "current": false,
+        "mod_version": "1.2.0",
+        "game_version": "4.0.0"
+    },
+    {
+        "name": "Project Fika",
+        "url": "https://forge.sp-tarkov.com/mod/2326/project-fika",
+        "icon": "https://forge-static.sp-tarkov.com/mods/RhGQs4svMQ3MWGiEwn8WUQXxP3GUdVhLorptQcXA.png",
+        "current": true,
+        "mod_version": "2.0.2",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Questing Bots",
+        "url": "https://forge.sp-tarkov.com/mod/1109/questing-bots",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1534.jpg",
+        "current": false,
+        "mod_version": "0.10.3",
+        "game_version": "3.11.4"
+    },
+    {
+        "name": "Ram Cleaner Fix",
+        "url": "https://forge.sp-tarkov.com/mod/1311/ram-cleaner-fix",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1827.png",
+        "current": false,
+        "mod_version": "1.2.3",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Ref - SPT Friendly Quests",
+        "url": "https://forge.sp-tarkov.com/mod/1538/ref-spt-friendly-quests",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2108.png",
+        "current": true,
+        "mod_version": "2.0.1",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "SAIN - Solarint's AI Modifications - Full AI Combat System Replacement",
+        "url": "https://forge.sp-tarkov.com/mod/791/sain-solarints-ai-modifications-full-ai-combat-system-replacement",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1062.jpg",
+        "current": true,
+        "mod_version": "4.2.0",
+        "game_version": "4.0.0"
+    },
+    {
+        "name": "Tarkov HD Item Rework Project",
+        "url": "https://forge.sp-tarkov.com/mod/1896/tarkov-hd-item-rework-project",
+        "icon": "https://forge-static.sp-tarkov.com/mods/2558.jpg",
+        "current": false,
+        "mod_version": "0.43.5",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "That's Lit - Logical AI Vision",
+        "url": "https://forge.sp-tarkov.com/mod/1055/thats-lit-logical-ai-vision",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1453.png",
+        "current": false,
+        "mod_version": "1.3100.3",
+        "game_version": "3.10.5"
+    },
+    {
+        "name": "UI Fixes",
+        "url": "https://forge.sp-tarkov.com/mod/1342/ui-fixes",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1860.png",
+        "current": true,
+        "mod_version": "5.0.3",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Use Loose Loot",
+        "url": "https://forge.sp-tarkov.com/mod/933/use-loose-loot",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1264.png",
+        "current": false,
+        "mod_version": "1.5.0",
+        "game_version": "4.0.1"
+    },
+    {
+        "name": "Waypoints - Expanded Navmesh",
+        "url": "https://forge.sp-tarkov.com/mod/827/waypoints-expanded-navmesh",
+        "icon": "https://forge-static.sp-tarkov.com/mods/1119.png",
+        "current": false,
+        "mod_version": "1.7.1",
+        "game_version": "3.11.4"
+    }
+]

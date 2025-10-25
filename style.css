@@ -10,6 +10,7 @@
 
 .version {
     width: 40px; /* adjust based on longest version */
+    text-wrap: nowrap;
     text-align: right;
     color: #aaa;
     font-family: monospace; /* keeps digits aligned */
@@ -82,4 +83,24 @@ h2 {
 #potentialList li {
   border-left: 3px solid #e67e22; /* orange stripe for outdated mods */
   padding-left: 5px;
+}
+
+#lists {
+  background-color: #191919;
+  margin-top: 20px;
+  padding: 20px;
+  border: 1px solid #444;
+  border-radius: 8px;
+}
+
+#lists tr td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+#lists td {
+  width: 50%;
+  word-wrap: break-word;
+  white-space: normal;
+  vertical-align: top;
 }

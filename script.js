@@ -1,54 +1,81 @@
-document.addEventListener("DOMContentLoaded", function () {
-    const currentVersion = "4.0.1";
-    const [curMajor, curMinor, curPatch] = currentVersion.split(".").map(Number);
+document.addEventListener("DOMContentLoaded", () => {
+  const currentList = document.getElementById("currentList");
+  const potentialList = document.getElementById("potentialList");
 
-    // Create lists
-    const allItems = Array.from(document.querySelectorAll("li"));
-    const currentList = document.querySelector("#currentList");
-    const potentialList = document.querySelector("#potentialList");
+  // === Configure this to match your current SPT game version ===
+  const CURRENT_GAME_VERSION = "4.0.1";
 
-    // Sort alphabetically by link text
-    allItems.sort((a, b) =>
-        a.querySelector("a").textContent.toLowerCase()
-        .localeCompare(b.querySelector("a").textContent.toLowerCase())
-    );
+  // --- Helpers ---
+  function parseVersion(v) {
+    return v.split(".").map(x => parseInt(x, 10) || 0);
+  }
 
-    // Process each item
-    allItems.forEach((item) => {
-        const modVersion  = item.dataset.modVersion || "0.0.0";
-        const modGameVersion = item.dataset.gameVersion || "0.0.0";
-        const [modMajor = 0, modMinor = 0, modPatch = 0] = modGameVersion.split(".").map(Number);
-        const link = item.querySelector("a");
-    
-        // Determine color
-        let color = "red";
-        if (modMajor === curMajor) {
-            if (modMinor < curMinor) color = "yellow";
-            else if (modMinor === curMinor && modPatch < curPatch) color = "yellow";
-            else color = "green";
-        }
-    
-        // Build indicator
+  function getIndicatorColor(modGameVersion) {
+    const mod = parseVersion(modGameVersion);
+    const cur = parseVersion(CURRENT_GAME_VERSION);
+
+    const [majM, minM, patM] = mod;
+    const [majC, minC, patC] = cur;
+
+    if (majM === majC && minM === minC && patM === patC) {
+      return "#2ecc71"; // perfect match (green)
+    }
+    if (majM === majC && minM === minC) {
+      return "#f1c40f"; // same major/minor, patch difference (yellow)
+    }
+    if (majM === majC && Math.abs(minM - minC) <= 1) {
+      return "#f39c12"; // one minor version off (orange)
+    }
+    return "#e74c3c"; // major mismatch (red)
+  }
+
+  fetch("mods.json")
+    .then(res => {
+      if (!res.ok) throw new Error("Failed to load mods.json");
+      return res.json();
+    })
+    .then(mods => {
+      mods.sort((a, b) => a.name.localeCompare(b.name, undefined, { sensitivity: "base" }));
+
+      for (const mod of mods) {
+        const li = document.createElement("li");
+
+        // --- Indicator ---
         const indicator = document.createElement("span");
-        indicator.className = "indicator";
-        indicator.style.backgroundColor = color;
-    
-        // Rebuild list item
-        item.innerHTML = "";
-        item.appendChild(indicator);
-                
-        const versionSpan = document.createElement("span");
-        versionSpan.className = "version";
-        versionSpan.textContent = modVersion;
-        item.appendChild(versionSpan);
-                    
-        item.appendChild(link);
-        
-        // Append to correct list
-        if (item.dataset.current === "true") {
-            currentList.appendChild(item);
-        } else {
-            potentialList.appendChild(item);
-        }
+        indicator.classList.add("indicator");
+        indicator.style.backgroundColor = getIndicatorColor(mod.game_version);
+        indicator.title = `Mod for ${mod.game_version} vs current ${CURRENT_GAME_VERSION}`;
+
+        // --- Icon ---
+        const icon = document.createElement("img");
+        icon.src = mod.icon;
+        icon.alt = mod.name;
+        icon.width = 32;
+        icon.height = 32;
+        icon.style.borderRadius = "4px";
+
+        // --- Link ---
+        const link = document.createElement("a");
+        link.href = mod.url;
+        link.textContent = mod.name;
+        link.target = "_blank";
+
+        // --- Version text ---
+        const version = document.createElement("span");
+        version.className = "version";
+        version.textContent = mod.mod_version;
+
+        // --- Assemble ---
+        li.append(indicator, icon, link, version);
+
+        // --- Append to correct section ---
+        (mod.current ? currentList : potentialList).appendChild(li);
+      }
+    })
+    .catch(err => {
+      console.error("Error loading mod list:", err);
+      const msg = document.createElement("p");
+      msg.textContent = "Failed to load mod list.";
+      document.body.appendChild(msg);
     });
 });
