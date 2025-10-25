@@ -54,16 +54,16 @@ document.addEventListener("DOMContentLoaded", () => {
         icon.height = 32;
         icon.style.borderRadius = "4px";
 
+        // --- Version text ---
+        const version = document.createElement("span");
+        version.className = "version";
+        version.textContent = mod.mod_version;
+
         // --- Link ---
         const link = document.createElement("a");
         link.href = mod.url;
         link.textContent = mod.name;
         link.target = "_blank";
-
-        // --- Version text ---
-        const version = document.createElement("span");
-        version.className = "version";
-        version.textContent = mod.mod_version;
 
         // --- Assemble ---
         li.append(indicator, icon, link, version);
