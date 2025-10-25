@@ -230,5 +230,13 @@
         "current": true,
         "mod_version": "1.1.0",
         "game_version": "4.0.1"
+    },
+    {
+        "name": "Special Slots",
+        "url": "https://forge.sp-tarkov.com/mod/555/special-slots",
+        "icon": "https://forge-static.sp-tarkov.com/mods/775.png",
+        "current": false,
+        "mod_version": "4.0.0",
+        "game_version": "4.0.1"
     }
 ]
